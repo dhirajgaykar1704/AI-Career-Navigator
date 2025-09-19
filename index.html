@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Career Navigator</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1><i class="fas fa-robot"></i> AI Career Navigator</h1>
+            <p>Discover your path in the world of Artificial Intelligence</p>
+        </div>
+    </header>
+
+    <main class="container">
+        <section id="intro">
+            <h2>Find Your AI Career Path</h2>
+            <p>The AI industry offers diverse career opportunities across multiple domains. Take our assessment to discover which path aligns with your skills and interests.</p>
+            <button id="start-assessment" class="btn primary">Start Assessment</button>
+        </section>
+
+        <section id="assessment" class="hidden">
+            <h2>Career Assessment</h2>
+            <div id="question-container">
+                <!-- Questions will be dynamically inserted here -->
+            </div>
+            <div class="assessment-nav">
+                <button id="prev-question" class="btn secondary" disabled>Previous</button>
+                <button id="next-question" class="btn primary">Next</button>
+                <button id="submit-assessment" class="btn primary hidden">Get Results</button>
+            </div>
+        </section>
+
+        <section id="results" class="hidden">
+            <h2>Your AI Career Path Results</h2>
+            <div class="results-container">
+                <div class="primary-path">
+                    <h3>Primary Career Path</h3>
+                    <div id="primary-result">
+                        <!-- Primary result will be inserted here -->
+                    </div>
+                </div>
+                <div class="alternative-paths">
+                    <h3>Alternative Paths to Explore</h3>
+                    <div id="alternative-results">
+                        <!-- Alternative results will be inserted here -->
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="skill-assessment" class="hidden">
+            <h2>AI Skill Assessment</h2>
+            <p>Rate your proficiency in the following skills relevant to your recommended career path:</p>
+            <div id="skills-container">
+                <!-- Skills will be dynamically inserted here -->
+            </div>
+            <button id="analyze-skills" class="btn primary">Analyze My Skills</button>
+        </section>
+
+        <section id="learning-path" class="hidden">
+            <h2>Your Personalized Learning Path</h2>
+            <div id="learning-container">
+                <!-- Learning path will be inserted here -->
+            </div>
+            <div id="job-market-data">
+                <h3>Current Job Market Insights</h3>
+                <div id="job-market-visualization">
+                    <!-- Job market visualization will be inserted here -->
+                </div>
+            </div>
+        </section>
+
+        <section id="career-paths-info">
+            <h2>AI Career Paths</h2>
+            <div class="career-cards">
+                <div class="career-card">
+                    <div class="card-header">
+                        <i class="fas fa-brain"></i>
+                        <h3>Machine Learning Engineer</h3>
+                    </div>
+                    <div class="card-body">
+                        <p>Design and implement machine learning models and systems. Create algorithms that allow computers to learn from data.</p>
+                        <h4>Key Skills:</h4>
+                        <ul>
+                            <li>Python, TensorFlow, PyTorch</li>
+                            <li>Statistical modeling</li>
+                            <li>Data structures & algorithms</li>
+                            <li>Software engineering</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="career-card">
+                    <div class="card-header">
+                        <i class="fas fa-chart-line"></i>
+                        <h3>Data Scientist</h3>
+                    </div>
+                    <div class="card-body">
+                        <p>Analyze and interpret complex data to help organizations make better decisions. Extract insights from large datasets.</p>
+                        <h4>Key Skills:</h4>
+                        <ul>
+                            <li>Statistical analysis</li>
+                            <li>Data visualization</li>
+                            <li>Python, R</li>
+                            <li>SQL, database management</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="career-card">
+                    <div class="card-header">
+                        <i class="fas fa-microchip"></i>
+                        <h3>AI Research Scientist</h3>
+                    </div>
+                    <div class="card-body">
+                        <p>Advance the field of AI through innovative research. Develop new algorithms and approaches to solve complex problems.</p>
+                        <h4>Key Skills:</h4>
+                        <ul>
+                            <li>Advanced mathematics</li>
+                            <li>Deep learning architectures</li>
+                            <li>Research methodology</li>
+                            <li>Academic writing</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="career-card">
+                    <div class="card-header">
+                        <i class="fas fa-robot"></i>
+                        <h3>AI Ethics Specialist</h3>
+                    </div>
+                    <div class="card-body">
+                        <p>Ensure AI systems are developed and deployed ethically. Address bias, fairness, and transparency in AI applications.</p>
+                        <h4>Key Skills:</h4>
+                        <ul>
+                            <li>Ethical frameworks</li>
+                            <li>Policy development</li>
+                            <li>Bias detection & mitigation</li>
+                            <li>Interdisciplinary communication</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="career-card">
+                    <div class="card-header">
+                        <i class="fas fa-comments"></i>
+                        <h3>NLP Engineer</h3>
+                    </div>
+                    <div class="card-body">
+                        <p>Develop systems that can understand, interpret, and generate human language. Build chatbots, translation systems, and more.</p>
+                        <h4>Key Skills:</h4>
+                        <ul>
+                            <li>Computational linguistics</li>
+                            <li>Transformer models</li>
+                            <li>Text processing</li>
+                            <li>Python, NLTK, spaCy</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="career-card">
+                    <div class="card-header">
+                        <i class="fas fa-eye"></i>
+                        <h3>Computer Vision Engineer</h3>
+                    </div>
+                    <div class="card-body">
+                        <p>Create systems that can process, analyze, and understand visual data from the world. Develop image recognition and object detection systems.</p>
+                        <h4>Key Skills:</h4>
+                        <ul>
+                            <li>Image processing</li>
+                            <li>CNN architectures</li>
+                            <li>OpenCV</li>
+                            <li>Python, TensorFlow, PyTorch</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2023 AI Career Navigator | Your guide to AI career opportunities</p>
+        </div>
+    </footer>
+
+    <script src="app.js"></script>
+</body>
+</html>
